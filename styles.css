@@ -1,3 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 18.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+.wrap {
+  position: absolute;
+  background-color: #f2ebe3;
+  inset: 0;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  right: initial;
+  bottom: initial;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  height: 95vh;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 500px) {
+  .modal {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    flex-direction: row;
+    height: 56%;
+    width: 47%;
+  }
+}
+
+.modal__image-section {
+  width: 100%;
+  height: 40%;
+}
+@media screen and (min-width: 500px) {
+  .modal__image-section {
+    height: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal__image-section {
+    height: 100%;
+    width: 50%;
+  }
+}
+.modal__image-section .modal__image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal__info-section {
+  height: 60%;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+@media screen and (min-width: 768px) {
+  .modal__info-section {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.modal__product-type {
+  color: #6c7289;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+
+.modal__product-name {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  margin: 0.8rem 0 0 0;
+}
+
+.modal__product-description {
+  box-sizing: border-box;
+  line-height: 1.3rem;
+  font-weight: 500;
+  color: #6c7289;
+  font-size: 1em;
+}
+
+.modal__prices .prices__price {
+  display: inline-block;
+  margin: 2rem 0 0 0;
+  vertical-align: middle;
+}
+.modal__prices .prices__price_current {
+  font-family: "Fraunces", serif;
+  color: #3c8067;
+  font-size: 1.7em;
+}
+.modal__prices .prices__price_past {
+  margin-left: 1.5rem;
+  color: #6c7289;
+  text-decoration: line-through;
+}
+
+.add-to-cart-button {
+  background-color: #3c8067;
+  border: none;
+  border-radius: 0.7rem;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  height: 4rem;
+  margin: 1rem auto;
+}
+.add-to-cart-button .add-to-cart-button__p {
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 1rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

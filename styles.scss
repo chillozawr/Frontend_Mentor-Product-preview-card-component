@@ -14,3 +14,148 @@ $neutral-very-dark-blue: hsl(212, 21%, 14%);
 $neutral-dark-grayish-blue: hsl(228, 12%, 48%);
 $neutral-white: hsl(0, 0%, 100%);
 
+html {
+  font-size: 14px;
+
+  @media screen and (min-width: 500px) {
+    font-size: 18.5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.wrap {
+  position: absolute;
+  background-color: $primary-cream;
+  inset: 0;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  right: initial;
+  bottom: initial;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  height: 95vh;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @media screen and (min-width: 500px) {
+    width: 70vw;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    height: 56%;
+    width: 47%;
+  }
+}
+.modal__image-section {
+  width: 100%;
+  height: 40%;
+
+  @media screen and (min-width: 500px) {
+    height: 50%;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: 50%;
+  }
+
+  .modal__image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      //object-fit: unset;
+    }
+  }
+}
+
+.modal__info-section {
+  height: 60%;
+  background-color: $neutral-white;
+  font-family: $montserrat;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.modal__product-type {
+  color: $neutral-dark-grayish-blue;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+
+.modal__product-name {
+  font-family: $fraunces;
+  font-size: 2rem;
+  margin: 0.8rem 0 0 0;
+}
+
+.modal__product-description {
+  box-sizing: border-box;
+  line-height: 1.3rem;
+  font-weight: 500;
+  color: $neutral-dark-grayish-blue;
+  font-size: 1em;
+}
+
+
+.modal__prices {
+  .prices__price {
+    display: inline-block;
+    margin: 2rem 0 0 0;
+    vertical-align: middle;
+  }
+
+  .prices__price_current {
+    font-family: $fraunces;
+    color: $primary-dark-cyan;
+    font-size: 1.7em;
+  }
+
+  .prices__price_past {
+    margin-left: 1.5rem;
+    color: $neutral-dark-grayish-blue;
+    text-decoration: line-through;
+  }
+}
+
+.add-to-cart-button {
+  background-color: $primary-dark-cyan;
+  border: none;
+  border-radius: 0.7rem;
+  color: $neutral-white;
+  box-sizing: border-box;
+  width: 100%;
+  height: 4rem;
+  margin: 1rem auto;
+
+  .cart-icon {
+  }
+
+  .add-to-cart-button__p {
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 1rem;
+  }
+}
