@@ -14,3 +14,142 @@ $neutral-very-dark-blue: hsl(212, 21%, 14%);
 $neutral-dark-grayish-blue: hsl(228, 12%, 48%);
 $neutral-white: hsl(0, 0%, 100%);
 
+html {
+  font-size: 14px;
+
+  @media screen and (max-width: 400px), (max-height: 840px) {
+    font-size: 12px;
+  }
+}
+
+.wrap {
+  position: absolute;
+  background-color: $primary-cream;
+  inset: 0;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  right: initial;
+  bottom: initial;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  max-width: 50rem;
+  max-height: 37.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  
+  @media screen and (max-width: 699px) {
+    flex-direction: column;
+    max-height: 90vh;
+    width: 80vw;
+    height: 90vh;
+  }
+}
+
+.modal__image-section {
+  max-width: 25rem;
+
+  @media screen and (max-width: 699px) {
+    max-width: unset;
+    width: 100%;
+    max-height: 40%;
+  }
+
+  .modal__image-preview {
+    max-width: 25rem;
+    max-height: 100%;
+
+    @media screen and (max-width: 699px) {
+      max-width: unset;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.modal__info-section {
+  background-color: $neutral-white;
+  max-width: 25rem;
+  padding: 1.5rem 3rem 1rem 2.5rem;
+  font-family: $montserrat;
+
+  @media screen and (max-width: 699px) {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    height: 60%;
+    padding: 1.5rem 3rem 0 2.5rem;
+  }
+
+  .modal__product-type {
+    color: $neutral-dark-grayish-blue;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+  }
+
+  .modal__product-name {
+    font-family: $fraunces;
+    font-size: 2.5rem;
+  }
+
+  .modal__product-description {
+    line-height: 1.5rem;
+    box-sizing: border-box;
+  }
+}
+
+.modal__prices {
+  margin-top: 3rem;
+
+  .prices__price {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  .prices__price_current {
+    font-family: $fraunces;
+    color: $primary-dark-cyan;
+    font-size: 2.5rem;
+  }
+
+  .prices__price_past {
+    color: $neutral-dark-grayish-blue;
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.add-to-cart-button {
+  background-color: $primary-dark-cyan;
+  border: none;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 4rem;
+  color: $neutral-white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 699px) {
+    max-width: unset;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .cart-icon {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  .add-to-cart-button__p {
+    margin: 0 0 0 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
